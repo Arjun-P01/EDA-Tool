@@ -157,4 +157,4 @@ Missing values: {df.isin(['?']).sum().sum()} cells contain '?'
                 {"role": "user", "content": f"Here are the EDA statistics:\n{stats}\nWrite an intelligent summary."}
             ]
         )
-    st.markdown(response.choices[0].message.content)
+    st.markdown(response.choices[0].message.content.replace("$", r"\$"))
